@@ -149,7 +149,37 @@ function lastResults(){
     adsNameArr.push(ads);
     var adsViews = busMallArr[j].viewResult;
     adsClicks.push(adsViews);
+
+  }
+  console.log(adsViews);
+  var ctx = document.getElementById('myAds').getContext('2d');
+  // eslint-disable-next-line no-undef
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: adsNameArr,
+      datasets: [{
+        label: '# of Votes',
+        data: adsClicks,
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+}
+
   }}
+
 
 
 
