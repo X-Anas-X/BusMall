@@ -149,6 +149,7 @@ function lastResults(){
     adsNameArr.push(ads);
     var adsViews = busMallArr[j].viewResult;
     adsClicks.push(adsViews);
+
   }
   console.log(adsViews);
   var ctx = document.getElementById('myAds').getContext('2d');
@@ -176,3 +177,11 @@ function lastResults(){
     }
   });
 }
+
+  }}
+
+
+
+
+
+
